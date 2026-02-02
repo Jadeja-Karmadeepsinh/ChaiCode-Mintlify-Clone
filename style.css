@@ -1,0 +1,103 @@
+:root{
+    --color-background-main: lab(2.42579% -.165291 -.470081);
+    --color-text-main: lab(100% 0 0);
+    --color-background-soft: lab(100% 0 0 / .05);
+    --color-text-invert: lab(2.42579% -.165291 -.470081);
+    --blur-md: 12px;
+    --blur-lg: 16px;
+    --font-inter: "Inter", system-ui, sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--font-inter);
+    color: var(--color-text-main);
+    background-color: var(--color-background-main);
+}
+
+header{
+    border: 2px solid red;
+    backdrop-filter: blur(--blur-md);
+    /* style this propeerly tommorow */
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 64px;
+    padding: 16px 24px;
+    --tw-backdrop-blur: blur(var(--blur-lg));
+}
+
+.nav-logo{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 1.25rem;
+    font-weight: 600;
+}
+
+.nav-logo img{
+    width: 20px;
+    height: 20px;
+    translate: 0 1px;  /* check this one again */
+}
+
+.nav a{
+    text-decoration: none;
+    color: var(--color-text-main);
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a{
+    font-weight: 500;
+}
+
+.nav-cta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* .nav-cta a{
+    height: 34px;
+    border-radius: 24px;
+    text-align: center;
+    padding: 4.5px 12px; 
+} */
+
+.nav-cta a{
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 24px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1;
+}
+
+.nav-cta .cta-link{
+    background-color: var(--color-background-soft);
+}
+
+.nav-cta .cta-primary{
+    color: var(--color-text-invert);
+    background-color: var(--color-text-main);
+}
+
+/* add that backdrop blur and style nav properly tomorrow */
