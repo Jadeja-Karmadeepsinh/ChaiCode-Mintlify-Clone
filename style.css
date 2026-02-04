@@ -20,21 +20,38 @@ body{
     background-color: var(--color-background-main);
 }
 
+.page-bg{
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.page-bg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+}
+
 header{
-    border: 2px solid red;
-    backdrop-filter: blur(var(--blur-md));
+    /* border: 2px solid red; */
+    /* backdrop-filter: blur(var(--blur-md)); */
     position: sticky;
     top: 0;
     z-index: 50;
+
     background-color: transparent;
-    transition: background-color 0.2s ease, backdrop-filter 0.2s ease;
+    backdrop-filter: none;
+    transition: background-color 0.2s ease, backdrop-filter 0.2s ease, border-color 0.2s ease;
     /* style this propeerly tommorow */
 }
 
 header.scrolled{
-    background-color: lab(2.42579% -.165291 -.470081 / 0.6);
+    background-color: lab(2.42579% -.165291 -.470081 / 0.45);
+    /* background-color: lab(2.42579% -.165291 -.470081 / 0.6); */
     backdrop-filter: blur(var(--blur-lg));
-    border: 1px solid lab(100% 0 0 / 0.08);
+    border-bottom: 1px solid lab(100% 0 0 / 0.08);
 }
 
 nav{
@@ -50,7 +67,7 @@ nav{
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-family: 1.25rem;
+    font-size: 1.25rem;
     font-weight: 600;
 }
 
@@ -112,3 +129,7 @@ nav{
 }
 
 /* add that backdrop blur and style nav properly tomorrow */
+
+main {
+    background-color: var(--color-background-main);
+}
