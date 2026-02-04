@@ -130,6 +130,179 @@ nav{
 
 /* add that backdrop blur and style nav properly tomorrow */
 
-main {
+/* main {
+    height: 100%;
     background-color: var(--color-background-main);
+} */
+
+.suggestion{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.suggestion-link{
+    display: inline-flex;
+    align-items: center;
+
+    padding: 4px 8px 4px 4px;
+    gap: 0.4rem;
+    border-radius: 999px;
+
+    background-color: lab(100% 0 0 / 0.15);
+    backdrop-filter: blur(12px);
+
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: 1px solid lab(100% 0 0 / 0.12);
+
+    transition: background-color 0.2s ease;
+}
+
+.suggestion-link:hover{
+    background-color: lab(100% 0 0 / 0.07);
+}
+
+.badge{
+    display: inline-flex;
+    align-items: center;
+    height: 20px;
+
+    padding: 0 8px;
+    border-radius: 999px;
+
+    background-color: lab(51.3415 -41.5657 15.3527);
+
+    font-size: 0.7rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.suggestion-text {
+    white-space: nowrap;
+}
+
+.suggestion-arrow {
+    /* padding: 2px; */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+
+    background-color: lab(100% 0 0 / 0.9);
+    color: #111;
+
+    font-size: 0.75rem;
+    font-weight: 600;
+
+    transition: transform 0.2s ease;
+}
+
+.suggestion-link:hover .suggestion-arrow {
+    transform: translateX(2px);
+}
+
+.hero-section {
+    min-height: calc(100vh - 64px); /* full screen minus navbar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    padding-top: 1rem;
+    gap: 2rem;
+}
+
+.hero-text h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+}
+
+.hero-subtext {
+    max-width: 640px;
+}
+
+.hero-subtext p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+.hero-email {
+    margin-top: 1rem;
+}
+
+.email-form{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+
+    background-color: lab(100% 0 0 / 0.12);
+    backdrop-filter: blur(12px);
+
+    border-radius: 999px;
+    padding: 3px;
+    border: 1px solid lab(100% 0 0 / 0.12);
+
+    max-width: 560px;
+    width: 100%;
+}
+
+.email-form input{
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+
+    padding: 8px 12px;
+    color: #ffffff;
+
+    font-size: 0.9rem;
+}
+
+.email-form input::placeholder {
+    color: lab(100% 0 0 / 0.6);
+}
+
+.email-form button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    padding: 8px 14px;
+    border-radius: 999px;
+
+    background-color: #ffffff;
+    color: #111;
+
+    font-weight: 500;
+    font-size: 0.875rem;
+
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.email-form button:hover {
+    background-color: var(--color-text-main);
+    opacity: 0.95;
+}
+
+.hero-section::after {
+    content: "";
+    position: absolute;
+    top: 200px;
+    width: 600px;
+    height: 300px;
+    background: radial-gradient(
+        ellipse,
+        lab(51.3415 -41.5657 15.3527 / 0.25),
+        transparent 70%
+    );
+    z-index: -1;
 }
