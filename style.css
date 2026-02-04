@@ -20,7 +20,7 @@ body{
     background-color: var(--color-background-main);
 }
 
-.page-bg{
+/* .page-bg{
     position: fixed;
     inset: 0;
     z-index: -1;
@@ -32,6 +32,24 @@ body{
     height: 100%;
     object-fit: cover;
     opacity: 0.9;
+} */
+
+.page-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 120vh; /* only hero + navbar area */
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.page-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 header{
@@ -43,15 +61,21 @@ header{
 
     background-color: transparent;
     backdrop-filter: none;
-    transition: background-color 0.2s ease, backdrop-filter 0.2s ease, border-color 0.2s ease;
+    transition: background-color 0.2s ease, backdrop-filter 0.2s ease;
+
+    will-change: backdrop-filter, background-color;
     /* style this propeerly tommorow */
 }
 
 header.scrolled{
-    background-color: lab(2.42579% -.165291 -.470081 / 0.45);
-    /* background-color: lab(2.42579% -.165291 -.470081 / 0.6); */
+    /* background-color: lab(2.42579% -.165291 -.470081 / 0.45); */
+    /* background-color: lab(2.42579% -.165291 -.470081 / 0.6);
     backdrop-filter: blur(var(--blur-lg));
-    border-bottom: 1px solid lab(100% 0 0 / 0.08);
+    border-bottom: 1px solid lab(100% 0 0 / 0.08); */
+
+    background-color: lab(2.42579% -.165291 -.470081 / 0.25);
+    backdrop-filter: blur(10px) saturate(1.1);
+    border-bottom: 1px solid lab(100% 0 0 / 0.08)
 }
 
 nav{
@@ -75,6 +99,8 @@ nav{
     width: 20px;
     height: 20px;
     translate: 0 1px;  /* check this one again */
+    will-change: transform;
+    transform: translateZ(0);
 }
 
 .nav a{
@@ -208,6 +234,14 @@ nav{
 }
 
 .hero-section {
+    /* position: relative;
+    overflow: hidden;
+
+    background-image: url("./assests/bg-dark.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center; */
+
     min-height: calc(100vh - 64px); /* full screen minus navbar */
     display: flex;
     flex-direction: column;
@@ -293,7 +327,7 @@ nav{
     opacity: 0.95;
 }
 
-.hero-section::after {
+/* .hero-section::after {
     content: "";
     position: absolute;
     top: 200px;
@@ -305,4 +339,47 @@ nav{
         transparent 70%
     );
     z-index: -1;
+} */
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
 }
+
+.hero-dashboard {
+    margin-top: 3rem;
+
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    pointer-events: none;
+}
+
+.hero-dashboard img {
+    width: min(1100px, 90%);
+    border-radius: 16px;
+
+    box-shadow:
+        0 40px 80px -20px rgba(0, 0, 0, 0.6),
+        0 0 0 1px lab(100% 0 0 / 0.06);
+
+    transform: translateY(10px);
+}
+
+/* .hero-dashboard::before {
+    content: "";
+    position: absolute;
+    bottom: -80px;
+
+    width: 800px;
+    height: 400px;
+
+    background: radial-gradient(
+        ellipse,
+        lab(51.3415 -41.5657 15.3527 / 0.2),
+        transparent 70%
+    );
+
+    z-index: -1;
+} */

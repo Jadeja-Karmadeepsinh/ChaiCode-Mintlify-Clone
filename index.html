@@ -18,6 +18,7 @@
     <div class="page-bg">
         <img src="./assests/bg-dark.svg" alt="" aria-hidden="true">
     </div>
+
     <header>
         <nav class="nav container">
 
@@ -61,12 +62,16 @@
             <div class="hero-subtext">
                 <p>Helping teams create and maintain world-class</p><p> built for both humans and AI</p>
             </div>
-            
+
             <div class="hero-email">
                 <form action="#" class="email-form">
                     <input type="email" placeholder="Email address" required>
                     <button type="submit">Start Now</button>
                 </form>
+            </div>
+            
+            <div class="hero-dashboard">
+                <img src="./assests/hero-image-dark.svg" alt="Dashboard preview" aria-hidden="true">
             </div>
         </section>
     </main>
@@ -79,7 +84,7 @@
         const header = document.querySelector('header');
 
         window.addEventListener("scroll", () => {
-            if(window.scrollY > 10){
+            if(window.scrollY > 20){
                 header.classList.add("scrolled");
             }else{
                 header.classList.remove("scrolled");
