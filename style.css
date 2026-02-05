@@ -642,7 +642,7 @@ nav{
 .partnership-and-compliance{
     background-color: #151616;
     /* padding: 6rem 1.5rem 7rem; */
-    padding: 1rem 1.5rem 7rem;
+    padding: 1rem 1.5rem 3rem;
 }
 
 .parent-part-and-compli {
@@ -680,3 +680,22 @@ nav{
     max-width: 520px;
 }
 
+.story-img{
+    width: 100%;
+    padding: 3rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    background: #151616;
+}
+
+.antropic-st-img{
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+
+    border-radius: 24px;
+    display: block;
+
+  /* optional polish */
+    object-fit: cover;
+}
