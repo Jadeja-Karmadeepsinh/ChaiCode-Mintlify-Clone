@@ -383,3 +383,74 @@ nav{
 
     z-index: -1;
 } */
+
+.logos-section{
+    /* display: grid;
+    grid-template-columns: repeat(4, 100px); */
+    padding: 4rem 1.5rem 5rem;
+    text-align: center;
+}
+
+.logos-grid{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(120px, 1fr));
+    gap: 2.5rem 3rem;
+
+    max-width: 900px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.logos-grid figure {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logos-grid img {
+    height: 28px;
+    max-width: 140px;
+
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/* .logo-small img {
+    width: 100%;
+    max-height: 32px;
+} */
+
+.logos-grid img[src*="./assests/x.png"]{
+    transform: scale(0.35);
+}
+
+.intelligence-age {
+    padding: 6rem 1.5rem 7rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.intelligence-age-container{
+    max-width: 720px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.intelligence-age h2 {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.intelligence-age p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    opacity: 0.8;
+}
