@@ -819,3 +819,34 @@ nav{
     align-items: center;
     gap: 0.25rem;
 }
+
+.customer-btns{
+    margin-top: 2rem;      /* controls vertical gap from cards */
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.customer-btns button {
+    width: 24px;
+    height: 24px;
+
+    border-radius: 50%;
+    border: 1px solid lab(100% 0 0 / 0.12);
+
+    background: #ffffff;
+
+    color: var(--color-text-invert);
+    font-size: 1.25rem;
+    font-weight: 500;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.left-arrow{
+    opacity: 0.5;
+}
