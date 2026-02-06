@@ -1012,9 +1012,18 @@ nav{
 
 .footer-top .footer-container {
     padding: 1.5rem 1.5rem;
+    /* padding: 0 0 28px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 56px 40px 28px;
 }
 
 .footer-brand {
@@ -1022,7 +1031,8 @@ nav{
     align-items: center;
     gap: 0.5rem;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 1.15rem;
+    /* font-size: 14px; */
 }
 
 .footer-brand img {
@@ -1181,4 +1191,90 @@ nav{
     width: 14px;
     height: 14px;
     display: block;
+}
+
+/* vertical lines */
+
+
+.footer-grid {
+    position: relative;
+}
+
+.footer-grid > div {
+    position: relative;
+    padding-left: 1.75rem; /* spacing from divider */
+}
+
+/* vertical divider before each column except the first */
+.footer-grid > div:not(:first-child)::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.25rem;
+    bottom: 0.25rem;
+
+    width: 1px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.footer-grid h3 {
+    margin-left: -0.25rem; /* optical alignment */
+}
+
+.footer-grid a {
+    padding-left: 0.1rem;
+}
+
+/* checking */
+
+.footer {
+    position: relative;
+    width: 100%;
+    background: #151616;
+    color: #fff;
+}
+
+/* FULL-WIDTH TOP BORDER */
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 1px;
+    background: lab(100% 0 0 / 0.08);
+}
+
+/* LEFT & RIGHT VERTICAL BORDERS */
+.footer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    pointer-events: none;
+    background:
+        linear-gradient(lab(100% 0 0 / 0.08), lab(100% 0 0 / 0.08)) left top / 1px 100% no-repeat,
+        linear-gradient(lab(100% 0 0 / 0.08), lab(100% 0 0 / 0.08)) right top / 1px 100% no-repeat;
+}
+
+.footer-grid > div:not(:first-child)::before {
+    display: none;
+}
+
+.footer-top,
+.footer-links,
+.footer-security {
+    border-top: 1px solid lab(100% 0 0 / 0.08);
+    border-bottom: 1px solid lab(100% 0 0 / 0.08);
+}
+
+.footer-top,
+.footer-links,
+.footer-security,
+.footer-bottom {
+    margin: 0;
 }
