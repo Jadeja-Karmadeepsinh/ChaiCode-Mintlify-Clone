@@ -726,3 +726,48 @@ nav{
     /* filter: grayscale(100%); */
     /* transition: opacity 0.2s ease, filter 0.2s ease; */
 }
+
+.customer-text{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    /* padding: 2rem 4rem 0.5rem; */
+    padding: 7rem 1.5rem 3rem;;
+}
+
+.customers-text {
+    max-width: 720px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    gap: 1.25rem;
+}
+
+.customers-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+
+    color: var(--card-heading-color); 
+}
+
+.customers-heading {
+    font-size: clamp(2.5rem, 2vw, 2.75rem);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+.customers-subtext {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    opacity: 0.75;
+    text-align: center;
+
+    max-width: 620px;
+}
