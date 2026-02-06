@@ -1232,7 +1232,19 @@ nav{
     width: 100%;
     background: #151616;
     color: #fff;
+    padding: 0 1.5rem;
+    border-top: 1px solid lab(100% 0 0 / 0.08);
 }
+
+.footer-frame {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    position: relative;
+    border-left: 1px solid lab(100% 0 0 / 0.08);
+    border-right: 1px solid lab(100% 0 0 / 0.08);
+}
+
 
 /* FULL-WIDTH TOP BORDER */
 .footer::before {
